@@ -7,6 +7,7 @@ import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 import Ballmassagen from "./pages/Ballmassagen";
 import Hahnmassagen from "./pages/Hahnmassagen";
 import Home from "./pages/Home";
+import PollBuchen from "./pages/PollBuchen"
 
 
 ReactDOM.render(
@@ -18,6 +19,7 @@ ReactDOM.render(
                 <Route path="/" element={<Home />} />
                 <Route path="Ballmassagen" element={<Ballmassagen />} />
                 <Route path="Hahnmassagen" element={<Hahnmassagen />} />
+                <Route path="PollBuchen" element={<PollBuchen />} />
                 <Route path="*" element={<Home />}/>
                 {/*<Route path="date" element={<Date-buchen />} />*/}
                 {/*<Route path="night" element={<Nacht-buchen />} />*/}

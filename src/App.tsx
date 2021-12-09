@@ -1,39 +1,36 @@
 import React, {useState} from 'react';
 import './App.css';
-import { Layout, Menu, Breadcrumb } from 'antd';
-import {
-    HeartOutlined,
-    CalendarOutlined,
-    WomanOutlined
-} from '@ant-design/icons';
-import 'antd/dist/antd.css';
 import {Link, Outlet} from "react-router-dom";
 
 
 const App =() => {
 
-    const { Header, Content, Footer, Sider } = Layout;
 
     return (
         <div>
-            <Layout className="layout">
-                <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
-                    <div className="logo" />
-                    <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-                        <Menu.Item key="1"> <Link to="/"> Home </Link> </Menu.Item>
-                        <Menu.Item key="3"> <Link to="/Ballmassagen">Ballmassagen</Link> </Menu.Item>
-                        <Menu.Item key="4"> <Link to="/Hahnmassagen">Hahnmassagen</Link> </Menu.Item>
-                    </Menu>
-                </Header>
-                <Layout className="site-layout">
-                    <Header className="site-layout-background" style={{ padding: 0 }} />
-                    <Content>
-                        <Outlet />
-                    </Content>
-                    <Footer style={{ textAlign: 'center' }}></Footer>
-                </Layout>
 
-            </Layout>
+            <ul>
+                <li><Link to="/"> Home </Link></li>
+                <li className="dropdown">
+                    <a href="javascript:void(0)" className="dropbtn">Massagen</a>
+                    <div className="dropdown-content">
+                        <Link to="/Ballmassagen">Ballmassagen</Link>
+                        <Link to="/Hahnmassagen">Hahnmassagen</Link>
+                    </div>
+                </li>
+                <li className="dropdown">
+                    <a href="javascript:void(0)" className="dropbtn">Buchen</a>
+                    <div className="dropdown-content">
+                        <Link to="/">Polls Mama buchen</Link>
+                        <Link to="/PollBuchen">Poll buchen</Link>
+                    </div>
+                </li>
+                <li style={{float: 'right'}}><Link to="/PollBuchen"> About </Link></li>
+            </ul>
+
+            <Outlet />
+
+
 
 
         </div>
