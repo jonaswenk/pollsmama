@@ -1,0 +1,40 @@
+{
+    "version": 13,
+    "structures": {
+        "no_internet": {
+            "priority": 1,
+            "pixels": [
+                {
+                    "x": 353,
+                    "y": 929,
+                    "color": 19,
+                    "priority": 1
+                },
+                {
+                    "x": 353,
+                    "y": 930,
+                    "color": 19,
+                    "priority": 1
+                },
+                {
+                    "x": 354,
+                    "y": 929,
+                    "color": 19,
+                    "priority": 1
+                },
+                {
+                    "x": 354,
+                    "y": 930,
+                    "color": 19,
+                    "priority": 1
+                }
+            ]
+        }
+    },
+    "priorities": {
+        "0": 0,
+        "1": 1,
+        "2": 5,
+        "3": 10
+    }
+}
